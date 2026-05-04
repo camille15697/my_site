@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Моє Резюме</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="resume-wrapper">
+        <header class="header">
+            <div class="name-section">
+                <h1>Ерстенюк<br>Романія</h1>
+                <button id="theme-toggle" class="btn">Змінити тему</button>
+            </div>
+            <div class="contact-section">
+                <p>Львів, Україна</p>
+                <p>romaniia.ersteniuk.kb.2024@lpnu.ua</p>
+                <p>Telegram: @Daisy152</p>
+            </div>
+        </header>
+
+        <hr class="main-divider">
+
+        <main class="content">
+            <div class="left-column">
+                <h2>Досвід та проєкти</h2>
+                
+                <div class="experience-item">
+                    <h3>Розробка сайту-агрегатора подій</h3>
+                    <p class="date">2026</p>
+                    <p>Проєктування та розробка вебсайту з основними подіями Львівської політехніки, націленого на студентів.</p>
+                </div>
+
+                <div class="experience-item">
+                    <h3>Розробка бази даних для шахового клубу</h3>
+                    <p class="date">2024</p>
+                    <p>Проєктування структури бази даних, створення SQL-скриптів та зв'язків між таблицями для обліку гравців та турнірів.</p>
+                </div>
+
+                <div class="comments-section">
+                    <h2>Коментарі роботодавців</h2>
+                    <ul id="comments-list">
+                        <li>Завантаження коментарів...</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="right-column">
+                <h2>Освіта</h2>
+                <div class="info-item">
+                    <div class="icon">📚</div>
+                    <div>
+                        <h4>Національний університет "Львівська політехніка"</h4>
+                        <p class="date">2024 - дотепер</p>
+                        <p>Бакалавр, Кібербезпека</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <div class="icon">📚</div>
+                    <div>
+                        <h4>ВСП "ФКІТ НУ "Львівська політехніка"</h4>
+                        <p class="date">2022 - 2025</p>
+                        <p>Фаховий молодший бакалавр, Комп'ютерна інженерія</p>
+                    </div>
+                </div>
+
+                <hr class="section-divider">
+
+                <h2>Технічні навички</h2>
+                <div class="info-item">
+                    <div class="icon">💻</div>
+                    <div>
+                        <h4>Системи та мережі</h4>
+                        <p>Linux (Kali Linux), термінал, основи мережевої безпеки (Nmap, Wireshark)</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <div class="icon">💻</div>
+                    <div>
+                        <h4>Бази даних</h4>
+                        <p>MySQL / SQL</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+        
+        <footer class="footer">
+            <p id="os-browser-info"></p>
+            <p><i>Лабораторна робота №4</i></p>
+        </footer>
+    </div>
+
+    <div id="feedback-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>Зворотний зв'язок</h2>
+            <form action="https://formspree.io/f/xojpyorq" method="POST">
+                <input type="text" name="name" placeholder="Ваше ім'я" required>
+                <input type="email" name="email" placeholder="Ваш Email" required>
+                <input type="tel" name="phone" placeholder="Номер телефону" required>
+                <textarea name="message" placeholder="Ваше повідомлення" rows="4" required></textarea>
+                <button type="submit" class="btn">Відправити</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,249 @@
+/* Скидаємо базові відступи */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #eec4d3; 
+    color: #333;
+    line-height: 1.6;
+    padding: 40px 20px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Аркуш резюме */
+.resume-wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: #f5d1e1;
+    padding: 60px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    transition: background-color 0.3s;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.name-section h1 {
+    font-family: 'Georgia', serif; 
+    font-size: 64px;
+    line-height: 1;
+    color: #3c2129;
+}
+
+.contact-section {
+    text-align: right;
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.main-divider {
+    border: 0;
+    border-top: 2px solid #502c37;
+    margin: 30px 0 40px 0;
+}
+
+.section-divider {
+    border: 0;
+    border-top: 1px solid #ddd;
+    margin: 30px 0;
+}
+
+.content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+}
+
+h2 {
+    font-family: 'Georgia', serif;
+    font-size: 26px;
+    margin-bottom: 30px;
+    color: #502c37; 
+}
+
+h3, h4 {
+    font-size: 16px;
+    color: #1a1a1a;
+    margin-bottom: 5px;
+}
+
+.date {
+    font-weight: bold;
+    font-size: 13px;
+    color: #666;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+p {
+    font-size: 14px;
+    color: #444;
+}
+
+.info-item {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 30px;
+    align-items: flex-start;
+}
+
+.experience-item {
+    margin-bottom: 30px; 
+}
+
+.icon {
+    font-size: 20px;
+    background-color: #1a1a1a;
+    color: #ffffff;
+    border-radius: 50%;
+    min-width: 45px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s;
+}
+
+.footer {
+    margin-top: 60px;
+    text-align: center;
+    color: #999;
+    font-size: 12px;
+}
+
+/* --- СТИЛІ ЛАБОРАТОРНОЇ №4 --- */
+
+/* Темна тема */
+body.dark-mode {
+    background-color: #2a151b;
+    color: #f5d1e1;
+}
+
+body.dark-mode .resume-wrapper {
+    background-color: #3c2129;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+body.dark-mode h1, 
+body.dark-mode h2, 
+body.dark-mode h3, 
+body.dark-mode h4 {
+    color: #eec4d3;
+}
+
+body.dark-mode p,
+body.dark-mode .contact-section,
+body.dark-mode .date {
+    color: #d8b4c2;
+}
+
+body.dark-mode .main-divider,
+body.dark-mode .section-divider {
+    border-top-color: #502c37;
+}
+
+body.dark-mode .icon {
+    background-color: #eec4d3;
+    color: #3c2129;
+}
+
+/* Кнопки */
+.btn {
+    background-color: #502c37;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: 10px;
+    transition: 0.3s;
+}
+.btn:hover {
+    background-color: #3c2129;
+}
+
+/* Коментарі */
+#comments-list {
+    list-style-type: none;
+    margin-top: 15px;
+}
+#comments-list li {
+    background-color: rgba(255, 255, 255, 0.4);
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    font-size: 13px;
+    border-left: 3px solid #502c37;
+}
+body.dark-mode #comments-list li {
+    background-color: rgba(0, 0, 0, 0.2);
+    color: #d8b4c2;
+}
+
+/* Модальне вікно */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.modal-content {
+    background-color: #f5d1e1;
+    margin: 15% auto;
+    padding: 30px;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 400px;
+    position: relative;
+}
+
+body.dark-mode .modal-content {
+    background-color: #3c2129;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #502c37;
+}
+
+body.dark-mode .close-btn {
+    color: #eec4d3;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #c9a7b5;
+    border-radius: 5px;
+    font-family: inherit;
+    background-color: #fff;
+}
+
+body.dark-mode form input,
+body.dark-mode form textarea {
+    background-color: #2a151b;
+    border-color: #502c37;
+    color: #f5d1e1;
+}
